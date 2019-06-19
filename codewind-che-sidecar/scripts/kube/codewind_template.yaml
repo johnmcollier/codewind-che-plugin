@@ -79,6 +79,9 @@ spec:
         persistentVolumeClaim:
           claimName: PVC_NAME_PLACEHOLDER
       - name: buildah-volume
+      - name: dockersock
+        hostPath:
+          path: /var/run/docker.sock
       - name: registry-secret
         secret:
           defaultMode: 0777
@@ -97,6 +100,8 @@ spec:
           mountPath: "/var/lib/containers"
         - name: registry-secret
           mountPath: "/tmp/secret"
+        - name: dockersock
+          mountPath: "/var/run/docker.sock"
         env:
           - name: IN_K8
             value: "true"
