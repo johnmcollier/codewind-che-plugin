@@ -9,24 +9,19 @@
 #     IBM Corporation - initial API and implementation
 ################################################################################
 
-id: codewind-sidecar
 apiVersion: v2
-version: 0.0.1
-type: Che Plugin
-name: CodewindPlugin
-title: CodewindPlugin
-description: Enables iterative development and deployment in Che
-icon: https://raw.githubusercontent.com/IBM/charts/master/logo/microclimate-logo.png
 publisher: IBM
-repository: https://github.com/eclipse/codewind-che-plugin
+name: codewind-plugin
+version: latest
+type: VS Code extension
+displayName: Codewind VS Code Extension
+title: Codewind Extension for VS Code
+description: Codewind Extension for Theia
+icon: https://raw.githubusercontent.com/IBM/charts/master/logo/microclimate-logo.png
+repository: http://github.com/eclipse/codewind-vscode/
 category: Other
-firstPublicationDate: "2019-05-30"
+firstPublicationDate: "2019-06-26"
+latestUpdateDate: "2019-06-26"
 spec:
-  containers:
-  - name: codewind-che-sidecar
-    image: ibmcom/codewind-che-sidecar
-    volumes:
-      - mountPath: "/projects"
-        name: projects
-    ports:
-      - exposedPort: 9090
+  extensions:
+    - http://download.eclipse.org/codewind/milestone/0.2.0/codewind-theia-0.2.0.vsix
