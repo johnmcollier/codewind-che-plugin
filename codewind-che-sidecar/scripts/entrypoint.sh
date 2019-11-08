@@ -49,7 +49,6 @@ nginx -g "daemon on;"
 status=$?
 if [ $status -ne 0 ]; then
     echo "Failed to start nginx: $status"
-    exit $status
 fi
 echo "Started nginx"
 
@@ -58,7 +57,6 @@ filewatcherd $CWServiceNameEndpoint "/usr/local/bin/cwctl" &
 status=$?
 if [ $status -ne 0 ]; then
     echo "Failed to start filewatcherd: $status"
-    exit $status
 fi
 echo "Started filewatcherd"
 
