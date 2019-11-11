@@ -15,7 +15,7 @@ The Codewind sidecar container includes the following responsibilities:
     - Nginx is used for the proxy because it can handle both HTTP requests and socket.io.
     - The Theia plug-in communicates with the reverse proxy, which then forwards requests to Codewind. This chain of communication avoids the addition of code in the Theia plug-in to discover and manage the connection to Codewind.
 - The sidecar runs the `filewatcherd` daemon to track user code changes.
-    - The `filewatcherd` daemon watches for changes in each user's project and communicates with Codewind, letting it know to start a build if required.
+    - The `filewatcherd` daemon watches for changes in each user's project and communicates with Codewind, letting it know to start a build if required.sdfsdf
     - For more information on `filewatcherd`, see [eclipse/codewind-filewatchers](https://github.com/eclipse/codewind-filewatchers).
 
 
